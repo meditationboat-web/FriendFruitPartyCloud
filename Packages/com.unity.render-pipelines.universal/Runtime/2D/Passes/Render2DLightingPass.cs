@@ -195,7 +195,9 @@ namespace UnityEngine.Rendering.Universal
             var rtCount = 0U;
 
             // Account for Sprite Mask and normal map usage where the first and last layer has to render the stencil pass
-            bool hasSpriteMask = UnityEngine.SpriteMaskUtility.HasSpriteMaskInScene();
+            // Use the public component API: some Unity 2022.3 cloud editors do not
+            // expose SpriteMaskUtility.HasSpriteMaskInScene to this embedded URP version.
+            bool hasSpriteMask = UnityEngine.Object.FindObjectOfType<UnityEngine.SpriteMask>() != null;
             bool normalsFirstClear = true;
 
             // Draw lights
