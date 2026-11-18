@@ -5,8 +5,7 @@
 /UserSettings/
 /PackageContents/
 /ReviewOriginals/
-/修改好的6个脚本/
-/摄像头背景修复版6个脚本/
+/*6*/
 /*.log
 /unpack.py
 /package-inventory.json
@@ -16,8 +15,5 @@
 .vs/
 *.csproj
 *.sln
-
 *.unitypackage
 *.unitypackage.meta
-
-`n/*6*/
